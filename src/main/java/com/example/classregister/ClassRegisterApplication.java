@@ -1,7 +1,9 @@
 package com.example.classregister;
 
+import com.example.classregister.Entity.Accounts;
 import com.example.classregister.Entity.Student;
 import com.example.classregister.Repository.StudentsRepository;
+import com.example.classregister.Repository.TeacherAccRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -18,6 +20,9 @@ public class ClassRegisterApplication implements CommandLineRunner {
     @Autowired
     StudentsRepository studentsRepository;
 
+    @Autowired
+    TeacherAccRepository teacherRepository;
+
     public static void main(String[] args) {
         SpringApplication.run(ClassRegisterApplication.class, args);
 
@@ -26,6 +31,13 @@ public class ClassRegisterApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args)   {
+
+
+        Accounts acc1 = new Accounts("whaaland", "poiu", "Wesley", "Haaland");
+        Accounts acc2 = new Accounts("jgray","daher", "Jackson", "Gray");
+
+        teacherRepository.save(acc1);
+        teacherRepository.save(acc2);
 
 
 /*
