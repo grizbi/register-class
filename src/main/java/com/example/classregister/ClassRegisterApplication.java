@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 
 import java.util.ArrayList;
@@ -33,16 +34,18 @@ public class ClassRegisterApplication implements CommandLineRunner {
     public void run(String... args)   {
 
 
-        Accounts acc1 = new Accounts("whaaland", "poiu", "Wesley", "Haaland");
-        Accounts acc2 = new Accounts("jgray","daher", "Jackson", "Gray");
+        //creating teachers
 
-        teacherRepository.save(acc1);
-        teacherRepository.save(acc2);
+//        Accounts acc1 = new Accounts("whaaland", "poiu", "Wesley", "Haaland");
+//        Accounts acc2 = new Accounts("jgray","daher", "Jackson", "Gray");
+//
+//        teacherRepository.save(acc1);
+//        teacherRepository.save(acc2);
 
 
 /*
 
-
+        //creating pupils
 
         List<Student> list1 = new ArrayList<>( Arrays.asList(
                 new Student(3.5, "John", "Kowalsky", 19),
